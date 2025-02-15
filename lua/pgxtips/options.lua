@@ -40,3 +40,8 @@ vim.o.updatetime = 80
 
 --set 80 wide column
 vim.o.colorcolumn = "80"
+
+-- provides a guranteed line number column width
+-- avoids auto changing width of vim when errors or 
+-- warning occur
+vim.o.signcolumn  = "yes:1"

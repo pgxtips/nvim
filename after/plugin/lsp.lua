@@ -28,3 +28,14 @@ require("mason-lspconfig").setup_handlers {
 -- If you use this approach, make sure you don't also manually set up servers
 -- directly via `lspconfig` as this will cause servers to be set up more than
 -- once.
+
+-- change border of documentation hover window, See https://github.com/neovim/neovim/pull/13998.
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded",
+})
+
+-- binds 
+vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end)
+vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end)
+vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end)
+

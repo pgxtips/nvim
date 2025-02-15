@@ -77,6 +77,10 @@ return {
         "mfussenegger/nvim-dap",
         priority = 100,
         lazy=false,
+        dependencies={
+            "nvim-neotest/nvim-nio",
+            "rcarriga/nvim-dap-ui"
+        }
     },
-}
 
+}
