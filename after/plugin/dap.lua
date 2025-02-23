@@ -55,6 +55,7 @@ dapui.setup({})
 vim.keymap.set("n", "<leader>dc", function() dap.continue() end)
 vim.keymap.set("n", "<leader>db", function() dap.toggle_breakpoint() end)
 vim.keymap.set("n", "<leader>dn", function() dap.step_over() end)
+vim.keymap.set("n", "<leader>dq", function() dap.terminate() end)
 
 -- dapui
 dap.listeners.before.launch.dapui_config = function()
