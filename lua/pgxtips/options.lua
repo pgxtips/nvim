@@ -35,6 +35,9 @@ vim.cmd[[
     au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=80}
 ]]
 
+-- stops auto comments on newline below comment
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
+
 --sets update time of how long vim waits to run plugins
 vim.o.updatetime = 80
 

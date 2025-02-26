@@ -22,6 +22,12 @@ require("mason-lspconfig").setup_handlers {
             }
         })
     end,
+
+    -- ["clangd"] = function ()
+    --     require('lspconfig').clangd.setup({
+    --         cmd = { "clangd", "--compile-commands-dir=build" },
+    --     })
+    -- end,
 }
 
 -- Note: 
