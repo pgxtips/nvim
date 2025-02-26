@@ -1,6 +1,8 @@
 --uses system clipboard
 vim.o.clipboard = "unnamedplus"
 
+vim.o.guicursor = ""
+
 --set tab spacing to 4 spaces
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
