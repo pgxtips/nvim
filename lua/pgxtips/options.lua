@@ -50,3 +50,6 @@ vim.o.colorcolumn = "80"
 -- avoids auto changing width of vim when errors or 
 -- warning occur
 vim.o.signcolumn  = "yes:1"
+
+-- hides __pycache__ folder
+vim.g.netrw_list_hide = [[\v(^|/)__pycache__]]
