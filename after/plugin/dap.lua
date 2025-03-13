@@ -12,7 +12,7 @@ dap.adapters.codelldb = {
     type = 'server',
     port = "${port}",
     executable = {
-        command = os.getenv("HOME") .. "/.local/share/nvim/mason/bin/debugpy-adapter",
+        command = os.getenv("HOME") .. "/.local/share/nvim/mason/bin/codelldb",
         args = {"--port", "${port}"},
     }
 }
