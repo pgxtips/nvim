@@ -175,16 +175,14 @@ vim.keymap.set("n", "<leader>dq", function() dap.terminate() end)
 
 -- dapui
 dap.listeners.before.attach.dapui_config = function()
-  dapui.open()
+    dapui.open()
 end
 dap.listeners.before.launch.dapui_config = function()
     dapui.open()
-    vim.keymap.set("n", "K", function() dapui.eval() end, { desc = "DAP Eval" })
 end
 dap.listeners.before.event_terminated.dapui_config = function()
     dapui.close()
 end
 dap.listeners.before.event_exited.dapui_config = function()
     dapui.close()
-    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end)
 end
